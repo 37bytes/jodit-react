@@ -43,17 +43,23 @@ const JoditEditor = forwardRef((props, ref) => {
 			editorRef(textArea.current)
 		}
 
+		if (textArea?.current?.value !== value) {
+			textArea.current.value = value
+		}
+
 		return () => {
 			textArea.current.destruct()
 			textArea.current = element
 		}
 	}, [config])
 
-	useEffect(() => {
+	// todo: Лечит ошибку: если скопировать любой текст, затем выделить весь текст в редакторе и вставить из буфера, то в редакторе останется пустая строка.
+	//  Не проверял изменение текста редактора через ref
+	/*useEffect(() => {
 		if (textArea?.current?.value !== value) {
 			textArea.current.value = value
 		}
-	}, [value])
+	}, [value])*/
 
 	return (
 		<textarea ref={textArea} />
