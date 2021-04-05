@@ -16,7 +16,7 @@
 		"rte"
 	],
 	"dependencies": {
-		"jodit": "git://github.com/rteslenko-37b/jodit.git"
+		"jodit": "git://github.com/rteslenko-37b/jodit.git#4a143145837fb28628ee63d8cbad10a73705a4eb"
 	},
 	"peerDependencies": {
 		"react": "~0.14 || ^15.0.0 || ^16.0.0",
