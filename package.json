@@ -16,7 +16,7 @@
 		"rte"
 	],
 	"dependencies": {
-		"jodit": "git://github.com/rteslenko-37b/jodit.git#4a143145837fb28628ee63d8cbad10a73705a4eb"
+		"jodit": "git://github.com/rteslenko-37b/jodit.git#9b0c7784f3922fc00e0bf86a9cc176f4db857239"
 	},
 	"peerDependencies": {
 		"react": "~0.14 || ^15.0.0 || ^16.0.0",
@@ -41,8 +41,8 @@
 	},
 	"scripts": {
 		"newversion": "npm update && rm -rf build/ && npm run build && npm version patch --no-git-tag-version && npm run github && npm publish ./",
-		"demo": "cd examples && export NODE_ENV=development && webpack-dev-server --config ./webpack.config.js --mode development --port 4000 --hot --inline",
-		"build": "export NODE_ENV=production && webpack --mode production",
+		"demo": "cd examples && webpack-dev-server --config ./webpack.config.js --mode development --port 4000 --hot --inline",
+		"build": "webpack --mode production",
 		"github": "git add --all  && git commit -m \"New version $npm_package_version. Read more https://github.com/jodit/jodit-react/releases/tag/$npm_package_version \" && git tag $npm_package_version && git push --tags origin HEAD:master"
 	},
 	"repository": {
