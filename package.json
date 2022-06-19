@@ -17,7 +17,7 @@
 	],
 	"dependencies": {
 		"eslint-plugin-react-hooks": "^4.5.0",
-		"jodit": "^3.9.4"
+    "jodit": "git://github.com/37bytes/jodit.git#e510ca864c97604fe2f0011416ae565504b319b6"
 	},
 	"peerDependencies": {
 		"react": "~0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
@@ -51,9 +51,9 @@
 	"scripts": {
 		"newversion": "npm run lint && npm update && rm -rf build/ && npm run build && npm version patch --no-git-tag-version && npm run github && npm publish ./",
 		"lint": "eslint ./",
-		"demo": "cd examples && export NODE_ENV=development && webpack-dev-server --config ./webpack.config.js --mode development --port 4000 --hot --inline",
+		"demo": "cd examples && webpack-dev-server --config ./webpack.config.js --mode development --port 4000 --hot --inline",
 		"start": "npm run demo",
-		"build": "export NODE_ENV=production && webpack --mode production",
+		"build": "webpack --mode production",
 		"github": "git add --all  && git commit -m \"New version $npm_package_version. Read more https://github.com/jodit/jodit-react/releases/tag/$npm_package_version \" && git tag $npm_package_version && git push --tags origin HEAD:master"
 	},
 	"repository": {
