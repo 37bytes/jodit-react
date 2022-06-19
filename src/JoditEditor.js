@@ -28,6 +28,10 @@ const JoditEditor = forwardRef(
 				editorRef(textArea.current);
 			}
 
+			if (textArea?.current?.value !== value) {
+				textArea.current.value = value
+			}
+
 			return () => {
 				if (textArea?.current) {
 					textArea.current.destruct();
@@ -65,11 +69,12 @@ const JoditEditor = forwardRef(
 			};
 		}, [onBlur, onChange]);
 
-		useEffect(() => {
+		// Лечит ошибку: если скопировать любой текст, затем выделить весь текст в редакторе и вставить из буфера, то в редакторе останется пустая строка.
+		/*useEffect(() => {
 			if (textArea?.current?.value !== value) {
 				textArea.current.value = value;
 			}
-		}, [value]);
+		}, [value]);*/
 
 		return (
 			<div className={'jodit-react-container'}>
