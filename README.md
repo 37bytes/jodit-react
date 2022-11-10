@@ -1,22 +1,16 @@
-# React Jodit WYSIWYG Editor
+# [React Jodit WYSIWYG Editor](https://github.com/jodit/jodit-react) fork
 
-[![npm](https://img.shields.io/npm/v/jodit-react.svg)](https://www.npmjs.com/package/jodit-react)
-[![npm](https://img.shields.io/npm/dm/jodit-react.svg)](https://www.npmjs.com/package/jodit-react)
-[![npm](https://img.shields.io/npm/l/jodit-react.svg)](https://www.npmjs.com/package/jodit-react)
-
-React wrapper for [Jodit](https://xdsoft.net/jodit/)
-
-> [Jodit React PRO](https://xdsoft.net/jodit/pro/) it is an extended version of Jodit React with the same API, but with a lot more features.
+React wrapper for [@37bytes/offer-builder-jodit-fork](https://github.com/37bytes/jodit/tree/offer-builder-jodit-fork), [jodit](https://xdsoft.net/jodit/) fork.
 
 ## Installation
 
 ```bash
-npm install jodit-react --save
+npm install @37bytes/offer-builder-jodit-react-fork --save
 ```
 
 ## Update editor version
 ```bash
-npm update jodit-react
+npm update @37bytes/offer-builder-jodit-react-fork
 ```
 
 ## Run demo
@@ -36,7 +30,7 @@ http://localhost:4000/
 
 ```jsx
 import React, {useState, useRef, useMemo} from 'react';
-import JoditEditor from "jodit-react";
+import JoditEditor from "@37bytes/offer-builder-jodit-react-fork";
 
 const Example = ({placeholder}) => {
 	const editor = useRef(null)

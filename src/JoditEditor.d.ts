@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IJodit } from 'jodit';
+import { IJodit } from '@37bytes/offer-builder-jodit-fork/index';
 
 declare module 'jodit-react' {
 	export interface IJoditEditorProps {
